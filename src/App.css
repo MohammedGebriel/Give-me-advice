@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image:   url('./assets/city.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    background-color: whitesmoke;
+    width: 40%;
+    min-height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    box-shadow: 10px 10px 50px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    font-family: 'League Spartan', sans-serif;
+    margin-bottom: 15px;
+}
+
+.button {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 210px;
+    padding: 15px ;
+    opacity: 1;
+    background-color: #ffffff;
+    border: 1px solid rgba(22, 76, 167, 0.6);
+}
+
+.button span {
+color: #164ca7;
+font-size: 12px;
+font-weight: 500;
+letter-spacing: 0.7px;
+}
+
+.button:hover {
+animation: rotate 0.7s ease-in-out both;
+background-color: #5D7FA1;
+}
+
+.button:hover span {
+animation: storm 0.7s ease-in-out both;
+animation-delay: 0.06s;
+color: white;
+}
+
+@keyframes rotate {
+0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+}
+25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+}
+50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+}
+75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+}
+100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+}
+}
+
+@keyframes storm {
+0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+}
+25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+}
+50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+}
+75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+}
+100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+}
+}  
+
+@media only screen and (max-width: 600px) {
+.card {
+    width: 80%;
+    min-height: 30%;
+}
+}
